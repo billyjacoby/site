@@ -1,0 +1,34 @@
+@font-face {
+  font-family: Inter;
+  src: url("../font/Inter-VariableFont_slnt\,wght.ttf") format('woff2-variations');
+  font-weight: 100 1000; 
+}
+
+@font-face {
+  font-family: Fira;
+  src: url("../font/FiraCode-VariableFont_wght.ttf") format('woff2-variations');
+  font-weight: 100 1000; 
+
+}
+
+:root {
+    /* CSS Variables */
+  --primary-background: #1d1d1d;
+  --secondary-background: #636363;
+
+  --primary-font: #fff;
+  --accent: #5dea51;
+  --accent-2: #611991;
+}
+
+html {
+  font-family: Inter;
+  font-size: 16px;
+
+  color: var(--primary-font);
+  background-color: var(--primary-background);
+}
+
+body {
+  margin: 0;
+}

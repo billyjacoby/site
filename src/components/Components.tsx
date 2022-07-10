@@ -1,0 +1,74 @@
+import styled from 'styled-components';
+
+export const VariableH1 = styled.h1<{
+  weight?: number | string;
+  slant?: string | number;
+}>`
+  display: flex;
+  align-items: center;
+  ${({ weight }) => weight && `font-weight: ${weight};`};
+  ${({ slant }) => slant && `font-variation-settings: 'slnt' ${slant};`};
+`;
+
+export const VariableH2 = styled.h2<{
+  weight?: number | string;
+  slant?: string | number;
+}>`
+  display: flex;
+  align-items: center;
+  ${({ weight }) => weight && `font-weight: ${weight};`};
+  ${({ slant }) => slant && `font-variation-settings: 'slnt' ${slant};`};
+`;
+
+export const VariableH4 = styled.h4<{
+  weight?: number | string;
+  slant?: string | number;
+}>`
+  display: flex;
+  align-items: center;
+  ${({ weight }) => weight && `font-weight: ${weight};`};
+  ${({ slant }) => slant && `font-variation-settings: 'slnt' ${slant};`};
+`;
+
+export const StyledSection = styled.section<{ background?: string }>`
+  width: 100%;
+  background: ${({ background }) =>
+    background ? background : 'var(--primary-background)'};
+`;
+
+export const TextContainer = styled.div`
+  padding: 5rem 2rem;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+`;
+
+export const Container = styled.div<{ maxWidth?: number }>`
+  max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '1000px')};
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+`;
+
+export const WebsiteName = styled.div`
+  font-family: Fira;
+  font-size: 1.35rem;
+  color: var(--accent);
+`;
+
+export const Button = styled.button``;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  :hover {
+    color: var(--accent);
+  }
+`;
