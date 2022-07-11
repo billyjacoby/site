@@ -50,8 +50,11 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const Container = styled.div<{ maxWidth?: number }>`
-  max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '1000px')};
+export const Container = styled.div<{ maxWidth?: number | string }>`
+  max-width: ${({ maxWidth }) =>
+    maxWidth
+      ? `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`
+      : '1000px'};
   margin: auto;
 
   display: flex;

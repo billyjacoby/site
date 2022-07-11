@@ -8,7 +8,7 @@ import { Section } from '../components/Section';
 import { VariableH2 } from '../components/Components';
 import { Collaboration } from '../svgs/Collaboration';
 import { Footer } from '../components/Footer';
-import { BlogSection } from '../components/BlogSection';
+import { BlogSection } from '../components/Blog/BlogSection';
 
 const IndexPage = () => {
   return (

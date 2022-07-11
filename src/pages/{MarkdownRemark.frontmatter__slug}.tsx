@@ -9,7 +9,6 @@ import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/
 deckDeckGoHighlightElement();
 
 export default function Template({ data }: PageProps<Queries.BlogPostQuery>) {
-  console.log('data', data);
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark!;
 

@@ -18,7 +18,7 @@ export function Header() {
           an avid learner of things
         </VariableH4>
       </div>
-      <ThinkingAtDesk color1="var(--accent)" />
+      <ThinkingAtDesk color1="var(--accent-2)" />
     </Section>
   );
 }
