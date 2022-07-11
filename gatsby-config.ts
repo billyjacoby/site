@@ -2,8 +2,8 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `billyjacoby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `billyjacoby.com`,
+    siteUrl: `https://www.billyjacoby.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -37,14 +37,6 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'pages',
-    //     path: './src/pages/',
-    //   },
-    //   __key: 'pages',
-    // },
   ],
 };
 
