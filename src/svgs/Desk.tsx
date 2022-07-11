@@ -22,7 +22,6 @@ export const ThinkingAtDesk = ({ color1, width, height }: SVGProps) => {
     height = defaultColors.height;
   }
 
-  console.log('color1', color1);
   return (
     <svg
       className="animated"

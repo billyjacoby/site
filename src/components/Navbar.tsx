@@ -29,7 +29,7 @@ const RightSubtext = styled.div`
 
 const NavbarContainer = styled.div`
   height: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,6 @@
+import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const VariableH1 = styled.h1<{
   weight?: number | string;
@@ -56,7 +58,12 @@ export const Container = styled.div<{ maxWidth?: number }>`
   align-items: center;
 `;
 
-export const WebsiteName = styled.div`
+export const WebsiteName = ({ children }: { children: React.ReactNode }) => (
+  <StyledWebsiteName to="/">{children}</StyledWebsiteName>
+);
+
+const StyledWebsiteName = styled(Link)`
+  text-decoration: none;
   font-family: Fira;
   font-size: 1.35rem;
   color: var(--accent);
