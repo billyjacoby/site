@@ -1,6 +1,5 @@
 import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
 
 import { BlogCard } from '../components/Blog/BlogCard';
@@ -45,6 +44,7 @@ function BlogPage({ data }: PageProps<Queries.AllPostsQuery>) {
               title={post.frontmatter!.title!}
               excerpt={post!.excerpt!}
               image={post!.frontmatter!.featuredImage?.childImageSharp?.fluid}
+              publicURL={post!.frontmatter!.featuredImage?.publicURL}
             />
           ))}
         </Masonry>
@@ -69,6 +69,7 @@ export const query = graphql`
             title
             date
             featuredImage {
+              publicURL
               childImageSharp {
                 fluid(fit: CONTAIN) {
                   ...GatsbyImageSharpFluid

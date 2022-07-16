@@ -8,7 +8,7 @@ interface BlogCardProps {
   title: string;
   excerpt: string;
   image?: any;
-  publicURL?: string;
+  publicURL?: string | null;
 }
 
 export function BlogCard({
