@@ -22,9 +22,11 @@ function BlogCards() {
               featuredImage {
                 publicURL
                 childImageSharp {
-                  fluid(fit: CONTAIN) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    width: 500
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
             }
@@ -35,7 +37,8 @@ function BlogCards() {
   `);
 
   return allMarkdownRemark.edges.map(({ node }: { node: any }) => {
-    const image = node.frontmatter?.featuredImage?.childImageSharp?.fluid;
+    const image =
+      node.frontmatter?.featuredImage?.childImageSharp?.gatsbyImageData;
     const publicURL = node.frontmatter?.featuredImage?.publicURL;
 
     return (

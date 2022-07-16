@@ -1,7 +1,8 @@
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+
+import { Link } from 'gatsby';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 interface BlogCardProps {
   slug: string;
@@ -11,13 +12,8 @@ interface BlogCardProps {
   publicURL?: string | null;
 }
 
-export function BlogCard({
-  slug,
-  title,
-  excerpt,
-  image,
-  publicURL,
-}: BlogCardProps) {
+export function BlogCard(props: BlogCardProps) {
+  const { slug, title, excerpt, image, publicURL } = props;
   return (
     <Link
       key={slug}
@@ -29,11 +25,16 @@ export function BlogCard({
     >
       <CardContainer key={slug}>
         {image ? (
-          <CardGatsbyImg fluid={image} />
+          <CardGatsbyImg image={image} alt="slug" />
         ) : publicURL ? (
-          <CardImg src={publicURL} />
+          <CardImg src={publicURL} alt="slug" />
         ) : (
-          <CardImg src={'https://dummyimage.com/500x500.png'} />
+          <CardImg
+            src={'https://dummyimage.com/500x500.png'}
+            alt="slug"
+            width={500}
+            height={500}
+          />
         )}
         <CardHeading>{title}</CardHeading>
         {excerpt && <CardContent>{excerpt}</CardContent>}
@@ -55,7 +56,7 @@ const CardImg = styled.img`
   border-radius: 1rem;
 `;
 
-const CardGatsbyImg = styled(Img)`
+const CardGatsbyImg = styled(GatsbyImage)`
   border: solid 0.25rem var(--accent-2);
   border-radius: 1rem;
 `;

@@ -9,10 +9,13 @@ import { VariableH2 } from '../components/Components';
 import { Collaboration } from '../svgs/Collaboration';
 import { Footer } from '../components/Footer';
 import { BlogSection } from '../components/Blog/BlogSection';
+import { Helmet } from 'react-helmet';
+import { PageHelmet } from '../components/PageHelmet';
 
 const IndexPage = () => {
   return (
     <main>
+      <PageHelmet />
       <title>Home Page</title>
       <Navbar />
       <Header />

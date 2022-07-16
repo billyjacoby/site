@@ -5,6 +5,7 @@ import Masonry from 'react-masonry-css';
 import { BlogCard } from '../components/Blog/BlogCard';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navigation/Navbar';
+import { PageHelmet } from '../components/PageHelmet';
 import { Section } from '../components/Section';
 
 const breakpointColumnsObj = {
@@ -22,6 +23,7 @@ function BlogPage({ data }: PageProps<Queries.AllPostsQuery>) {
 
   return (
     <>
+      <PageHelmet subtitle="blog" />
       <Navbar />
       <Section style={{ height: '20rem' }}>
         <h1>Blog</h1>
@@ -43,7 +45,10 @@ function BlogPage({ data }: PageProps<Queries.AllPostsQuery>) {
               slug={post.frontmatter!.slug!}
               title={post.frontmatter!.title!}
               excerpt={post!.excerpt!}
-              image={post!.frontmatter!.featuredImage?.childImageSharp?.fluid}
+              image={
+                post!.frontmatter!.featuredImage?.childImageSharp
+                  ?.gatsbyImageData
+              }
               publicURL={post!.frontmatter!.featuredImage?.publicURL}
             />
           ))}
@@ -71,9 +76,11 @@ export const query = graphql`
             featuredImage {
               publicURL
               childImageSharp {
-                fluid(fit: CONTAIN) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 500
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

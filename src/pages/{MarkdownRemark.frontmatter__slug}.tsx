@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { Container } from '../components/Components';
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+import { PageHelmet } from '../components/PageHelmet';
 
 deckDeckGoHighlightElement();
 
@@ -17,11 +18,11 @@ export default function Template({ data }: PageProps<Queries.BlogPostQuery>) {
   }
   return (
     <>
+      <PageHelmet subtitle="blog post" />
       <Navbar />
       <Container>
         <div className="blog-post-container">
           <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </Container>
