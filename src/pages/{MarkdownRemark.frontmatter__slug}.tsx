@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/Navigation/Navbar';
 import { Footer } from '../components/Footer';
 import { Container } from '../components/Components';
 

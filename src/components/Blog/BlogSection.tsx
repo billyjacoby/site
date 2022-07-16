@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { VariableH2 } from '../Components';
@@ -20,6 +20,7 @@ function BlogCards() {
               title
               date
               featuredImage {
+                publicURL
                 childImageSharp {
                   fluid(fit: CONTAIN) {
                     ...GatsbyImageSharpFluid
@@ -35,13 +36,16 @@ function BlogCards() {
 
   return allMarkdownRemark.edges.map(({ node }: { node: any }) => {
     const image = node.frontmatter?.featuredImage?.childImageSharp?.fluid;
+    const publicURL = node.frontmatter?.featuredImage?.publicURL;
 
     return (
       <BlogCard
+        key={node.id}
         slug={node.frontmatter.slug}
         title={node.frontmatter.title}
         excerpt={node.excerpt}
         image={image}
+        publicURL={publicURL}
       />
     );
   });
@@ -52,6 +56,7 @@ export function BlogSection() {
     <Section>
       <div>
         <VariableH2>Recent Blog Posts</VariableH2>
+        <ViewMoreLink to="/blog">View All</ViewMoreLink>
         <BlogCardContainer>
           <BlogCards />
         </BlogCardContainer>
@@ -59,6 +64,14 @@ export function BlogSection() {
     </Section>
   );
 }
+
+const ViewMoreLink = styled(Link)`
+  text-decoration: none;
+  color: var(--accent);
+  :hover {
+    color: var(--accent-2);
+  }
+`;
 
 const BlogCardContainer = styled.div`
   display: flex;

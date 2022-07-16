@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //Components
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/Navigation/Navbar';
 import { Header } from '../components/Header';
 import { Section } from '../components/Section';
 import { VariableH2 } from '../components/Components';

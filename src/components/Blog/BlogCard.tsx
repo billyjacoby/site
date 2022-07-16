@@ -8,7 +8,7 @@ interface BlogCardProps {
   title: string;
   excerpt: string;
   image?: any;
-  imgSrc?: string;
+  publicURL?: string;
 }
 
 export function BlogCard({
@@ -16,8 +16,10 @@ export function BlogCard({
   title,
   excerpt,
   image,
-  imgSrc,
+  publicURL,
 }: BlogCardProps) {
+  console.log('image', image);
+  console.log('publicURL', publicURL);
   return (
     <Link
       key={slug}
@@ -30,8 +32,8 @@ export function BlogCard({
       <CardContainer key={slug}>
         {image ? (
           <CardGatsbyImg fluid={image} />
-        ) : imgSrc ? (
-          <CardImg src={imgSrc} />
+        ) : publicURL ? (
+          <CardImg src={publicURL} />
         ) : (
           <CardImg src={'https://dummyimage.com/500x500.png'} />
         )}
@@ -58,7 +60,6 @@ const CardImg = styled.img`
 const CardGatsbyImg = styled(Img)`
   border: solid 0.25rem var(--accent-2);
   border-radius: 1rem;
-  z-index: 10;
 `;
 
 const CardHeading = styled.h5`

@@ -44,7 +44,7 @@ export const TextContainer = styled.div`
   display: flex;
   gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     flex-direction: column;
     padding: 1rem 2rem;
   }
@@ -80,5 +80,13 @@ export const StyledLink = styled.a`
 
   :hover {
     color: var(--accent);
+  }
+`;
+
+export const NakedButton = styled.button`
+  all: unset;
+
+  :hover {
+    cursor: pointer;
   }
 `;

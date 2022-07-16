@@ -19,6 +19,8 @@
   --primary-font: #fff;
   --accent: #5dea51;
   --accent-2: #611991;
+
+  overflow-x: hidden;
 }
 
 * , *:before, *:after{ 
@@ -38,6 +40,15 @@ html {
 
 body {
   margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-2);
 }
 
 .my-masonry-grid {

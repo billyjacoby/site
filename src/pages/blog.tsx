@@ -5,7 +5,7 @@ import Masonry from 'react-masonry-css';
 
 import { BlogCard } from '../components/Blog/BlogCard';
 import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/Navigation/Navbar';
 import { Section } from '../components/Section';
 
 const breakpointColumnsObj = {

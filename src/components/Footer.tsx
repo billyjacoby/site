@@ -45,7 +45,7 @@ const RightFooter = styled.div`
   flex-direction: row;
   gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 550px) {
     margin-top: 1rem;
   }
 `;
@@ -55,7 +55,7 @@ const LeftFooter = styled.div`
   flex-direction: column;
   max-width: 65%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 550px) {
     max-width: 100%;
     margin-top: 2rem;
     order: 2;
@@ -71,7 +71,7 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 550px) {
     max-width: 100%;
     flex-direction: column;
   }
