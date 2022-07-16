@@ -3,15 +3,13 @@ import styled from 'styled-components';
 
 import { NakedButton, WebsiteName } from '../Components';
 import { BiMenuAltLeft } from 'react-icons/bi';
-//@ts-ignore
-import { MenuContext } from 'react-flexible-sliding-menu';
+import { MenuContext } from '../../lib/sliding-menu';
 import { NavigationLinks } from './NavLinks';
 
 export function Navbar() {
   const { toggleMenu } = React.useContext(MenuContext);
 
   const [isVisible, setIsVisible] = React.useState(false);
-  console.log('isVisible', isVisible);
   const [prevScrollPos, setPrevScrollPos] = React.useState(0);
 
   function handleScroll() {

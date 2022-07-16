@@ -1,6 +1,6 @@
 import React from 'react';
 import './src/styles/global.css';
-import MenuProvider from 'react-flexible-sliding-menu';
+import MenuProvider from './src/lib/sliding-menu';
 
 import { NavMenu } from './src/components/Navigation/NavMenu';
 

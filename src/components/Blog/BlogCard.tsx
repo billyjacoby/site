@@ -18,8 +18,6 @@ export function BlogCard({
   image,
   publicURL,
 }: BlogCardProps) {
-  console.log('image', image);
-  console.log('publicURL', publicURL);
   return (
     <Link
       key={slug}

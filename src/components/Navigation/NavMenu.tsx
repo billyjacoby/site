@@ -2,8 +2,7 @@ import React from 'react';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import styled from 'styled-components';
 
-//@ts-ignore
-import { MenuContext } from 'react-flexible-sliding-menu';
+import { MenuContext } from '../../lib/sliding-menu';
 import { NakedButton, WebsiteName } from '../Components';
 import { NavigationLinks } from './NavLinks';
 
