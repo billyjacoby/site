@@ -5,6 +5,8 @@ import { VariableH2 } from '../Components';
 import { Section } from '../Section';
 import { BlogCard } from './BlogCard';
 
+import chunkyBackground from '../../images/lottie/chunky-background.json';
+
 function BlogCards() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query LastThreePosts {
@@ -56,7 +58,14 @@ function BlogCards() {
 
 export function BlogSection() {
   return (
-    <Section>
+    <Section
+      bottomAnimation={{
+        animation: chunkyBackground,
+        color: '--secondary-background',
+        adjustPosition: false,
+        bottom: '50%',
+      }}
+    >
       <div>
         <VariableH2>Recent Blog Posts</VariableH2>
         <ViewMoreLink to="/blog">View All</ViewMoreLink>

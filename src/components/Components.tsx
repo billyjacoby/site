@@ -43,6 +43,7 @@ export const TextContainer = styled.div`
   margin: auto;
   display: flex;
   gap: 1rem;
+  z-index: 1;
 
   @media (max-width: 500px) {
     flex-direction: column;

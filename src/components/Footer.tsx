@@ -44,6 +44,7 @@ const RightFooter = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  z-index: 1;
 
   @media (max-width: 550px) {
     margin-top: 1rem;
@@ -54,6 +55,7 @@ const LeftFooter = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 65%;
+  z-index: 1;
 
   @media (max-width: 550px) {
     max-width: 100%;

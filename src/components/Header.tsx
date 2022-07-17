@@ -5,10 +5,11 @@ import { VariableH1, VariableH4 } from './Components';
 import { Section } from './Section';
 
 import { ThinkingAtDesk } from '../svgs/Desk';
+import spaceAnimation from '../images/lottie/space-background.json';
 
 export function Header() {
   return (
-    <Section>
+    <Section bottomAnimation={{ animation: spaceAnimation }}>
       <div>
         <VariableH1>
           a collection of blog posts, tech demos, and tutorials
