@@ -37,7 +37,7 @@ export function Section({
     if (cssVar.startsWith('#')) {
       return cssVar;
     }
-    if (window) {
+    if (typeof window !== 'undefined') {
       const rootEl = window.getComputedStyle(document.querySelector(':root')!);
       const color = rootEl.getPropertyValue(cssVar);
       return color.trim() || '#da12bf';
@@ -46,7 +46,7 @@ export function Section({
   }
 
   React.useEffect(() => {
-    if (window) {
+    if (typeof window !== 'undefined') {
       setDefaultColor(getHexFromCSSVar('--secondary-background'));
     }
   }, []);

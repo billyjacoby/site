@@ -9,7 +9,7 @@ export const NavigationLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       <Link to="/" onClick={closeMenu} style={{ width: '100%' }}>
         <NavLink>Home</NavLink>
       </Link>
-      <Link to="/" onClick={closeMenu} style={{ width: '100%' }}>
+      <Link to="/about" onClick={closeMenu} style={{ width: '100%' }}>
         <NavLink>About</NavLink>
       </Link>
       <Link to="/blog" onClick={closeMenu} style={{ width: '100%' }}>

@@ -6,9 +6,9 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 import { MenuContext } from '../../lib/sliding-menu';
 import { NavigationLinks } from './NavLinks';
 
-import menuAnimation from '../../images/lottie/lottieflow-menu-nav-11-19-000000-easey.json';
-import { Player } from '@lottiefiles/react-lottie-player';
-import { replaceColor } from 'lottie-colorify';
+// import menuAnimation from '../../images/lottie/lottieflow-menu-nav-11-19-000000-easey.json';
+// import { Player } from '@lottiefiles/react-lottie-player';
+// import { replaceColor } from 'lottie-colorify';
 
 export function Navbar() {
   const { toggleMenu } = React.useContext(MenuContext);
@@ -46,13 +46,13 @@ export function Navbar() {
             <NavigationLinks />
           </NavLinks>
           <NavButton onClick={toggleMenu}>
-            {/* <BiMenuAltLeft size="64" onClick={toggleMenu} /> */}
-            <LottieButton
+            <BiMenuAltLeft size="64" onClick={toggleMenu} />
+            {/* <LottieButton
               src={replaceColor('#000000', '#ffffff', menuAnimation)}
               autoplay
               loop={true}
               style={{ zIndex: 100000 }}
-            />
+            /> */}
           </NavButton>
         </RightContent>
       </InnerContainer>
@@ -60,10 +60,10 @@ export function Navbar() {
   );
 }
 
-const LottieButton = styled(Player)`
-  height: 64px;
-  width: 128px;
-`;
+// const LottieButton = styled(Player)`
+//   height: 64px;
+//   width: 128px;
+// `;
 
 const NavButton = styled(NakedButton)`
   @media (min-width: 550px) {

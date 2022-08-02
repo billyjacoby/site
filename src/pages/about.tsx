@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 //Components
 import { Navbar } from '../components/Navigation/Navbar';
-import { Header } from '../components/IndexHeader';
+import { AboutHeader } from '../components/AboutHeader';
 import { Section } from '../components/Section';
 import { VariableH2 } from '../components/Components';
 import { Collaboration } from '../svgs/Collaboration';
@@ -17,7 +17,7 @@ const IndexPage = () => {
       <PageHelmet />
       <title>Home Page</title>
       <Navbar />
-      <Header />
+      <AboutHeader />
       <Section background="var(--secondary-background)">
         <Collaboration color1="var(--accent)" />
         <div>
